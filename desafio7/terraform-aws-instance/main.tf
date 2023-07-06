@@ -4,7 +4,6 @@ resource "aws_key_pair" "key" {
 }
 
 resource "aws_default_vpc" "default_vpc" {
-
 }
 
 resource "aws_security_group" "allow_ssh" {

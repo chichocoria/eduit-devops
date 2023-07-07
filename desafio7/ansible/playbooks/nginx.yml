@@ -4,13 +4,11 @@
   hosts: web
   tasks:
     - name: Esta tarea instala nginx
-      yum:
-        name: nginx
-        state: latest
+      apt: name=nginx state=latest
     - name: Añadir fichero index.html
       template:
-       src: /home/darioc/eduit-devops/desafio7/ansible/playbooks/index.html
-       dest: /usr/share/nginx/html/index.html 
+       src: /home/vagrant/vm_aws_terraform/index.nginx-debian.html
+       dest: /var/www/html/index.nginx-debian.html
     - name: Arrancar Nginx
       service:
        name: nginx

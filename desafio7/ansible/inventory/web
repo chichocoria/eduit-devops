@@ -1,3 +1,3 @@
 #Inventorio de host, en este caso de la EC2 en AWS
 [web]
-34.100.185.153 ansible_user=ubuntu
+54.86.131.119 ansible_ssh_private_key_file=aws_ec2_eduit_desafio7 ansible_user=ubuntu remote_user=ubuntu

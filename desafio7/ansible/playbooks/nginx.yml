@@ -1,0 +1,17 @@
+#nginx.yml
+---
+- name: Este Playbook instala nginx
+  hosts: web
+  tasks:
+    - name: Esta tarea instala nginx
+      yum:
+        name: nginx
+        state: latest
+    - name: Añadir fichero index.html
+      template:
+       src: /home/darioc/eduit-devops/desafio7/ansible/playbooks/index.html
+       dest: /usr/share/nginx/html/index.html 
+    - name: Arrancar Nginx
+      service:
+       name: nginx
+       state: started

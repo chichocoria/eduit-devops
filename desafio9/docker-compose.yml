@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    build: ./app
+    image: chichocoria/app_desafio9:1.0.0
     links:
       - db
     ports:

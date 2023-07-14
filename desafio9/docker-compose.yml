@@ -6,6 +6,9 @@ services:
       - db
     ports:
       - "4000:4000"
+    ##volumen creado para modificar index.html
+    volumes:
+      - ./app/templates:/app/templates
     restart: always
   db:
     image: mariadb:10.6
